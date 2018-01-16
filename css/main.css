@@ -1,0 +1,53 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.ajustarTela {
+	margin-bottom: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.row.ajusteRow{
+	height: 100px !important;
+}
+
+.ajustarAreaFormulario {
+	padding-left: 90px;
+	padding-right: 90px;
+	background-color: gray;
+}
+
+.imagensCadastro {
+	width: 105%;
+	color: rgb(255, 255, 255);
+	padding: 20px;
+	height: 254px;
+}
+
+.ocuparArea {
+	width: 100%;
+}
+
+.fundoCinza {
+	background-color: gray;
+	background-image: url("../img/exemplo-organico.jpg");
+}
+
+.iconePassar {
+	margin-top: -155px;
+	position: relative;
+	font-size: 25px;
+	color: black;
+}
+
+
+
+
+
+
+
+
+

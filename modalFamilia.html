@@ -1,0 +1,69 @@
+<div id="modalAssociarFamilia" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					ng-click="close()">&times;</button>
+				<h4 class="modal-title">Escolha da Família da Planta</h4>
+			</div>
+			<div class="modal-body">
+				<form role="form" class="compact-form" name="familiaForm">
+					<div class="row">
+						<div class="col-sm-12">
+							<input class="form-control" type="text" ng-model="busca"
+								placeholder="Qual família de plantas está buscando?" />
+						</div>
+						<div class="col-sm-12" style="margin-top: 10px;">
+							<table ng-show="familia.length > 0" class="table table-striped">
+								<tr>
+									<th></th>
+									<th><a href="" ng-click="ordenarPor('codFamilia')">Código</a></th>
+									<th><a href="" ng-click="ordenarPor('nomFamilia')">Nome</a></th>
+
+								</tr>
+								<tr ng-class="{'selecionado negrito': familia.selecionado}"
+									ng-repeat="x in familia">
+									<td if=""><input type="checkbox" ng-model="x.selecionado" /></td>
+									<td>{{x.codFamilia}}</td>
+									<td>{{x.nomFamilia}}</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</form>
+				<div clas="row">
+					<div class="cadastro">
+						<form name="familiaForm">
+							<div class="form-group">
+								<label for="familia.nomFamilia">Nome Científico da
+									Família</label> <input type="text" class="form-control" id="nomFamilia"
+									ng-maxlength="50" ng-model="familia.nomFamilia"></input>
+							</div>
+						</form>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="pull-right">
+								<button type="button" class="btn btn-primary"
+									ng-click="adicionarFamilia(familia)">
+									Cadastro</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="row">
+						<div class="pull-right">
+							<button type="button" class="btn btn-primary">
+								<i class="mudarVisibilidadeCadastro()"></i>Novo Cadastro</span>
+							</button>
+							<button type="button" class="btn btn-primary">
+								<i class="salvar"></i>Confirmar</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

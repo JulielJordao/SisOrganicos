@@ -1,0 +1,116 @@
+
+<div class="row">
+	<div class="col-sm-12 ajustarTela jumbotron"
+		style="margin-bottom: 0px;">
+		<div class="col-sm-4" style="max-height: 500px">
+			<div class="imagensCadastro" style="padding-top: 0px;">
+				<a class="glyphicon glyphicon-remove pull-right"
+					style="margin-bottom: -12px;"></a> <img id="imagemCadExibicao"
+					src="img/sem_foto.jpg" alt="sem-foto"
+					style="height: 100%; width: 100%;"> <a
+					class="glyphicon glyphicon-chevron-left pull-left iconePassar"></a>
+				<a class="glyphicon glyphicon-chevron-right pull-right iconePassar"></a></img>
+			</div>
+			<div class="pull-right" style="margin-top: 10px; margin-right: 5px;">
+				<button type="submit" class="btn btn-default">Importar
+					Imagens</button>
+			</div>
+		</div>
+		<div class="col-sm-8 jumbotron"
+			style="padding-bottom: 0px; margin-bottom: 0px; padding-top: 0px;">
+			<form role="form">
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="nomPopular">Nome Popular da Planta</label> <input
+							type="text" class="form-control" id="nomPopular"
+							ng-maxlength="50" ng-model="nomPopular" required="required">
+					</div>
+				</div>
+				<div class="col-sm-6">
+					<div class="form-group">
+						<label for="nomCientifico">Nome Científico da Planta</label> <input
+							type="text" class="form-control" id="nomCientifico"
+							ng-maxlength="50" ng-model="nomCientifico" required="required">
+					</div>
+				</div>
+				<!-- 				verificar como fazer integração com a familia -->
+				<div class="col-sm-6">
+					<label for="assFamilia">Associar Família</label>
+					<div class="input-group">
+						<input type="text" class="form-control" ng-maxlength="50"
+							ng-model="familia.codFamilia" ng-disabled="true" required="required">
+						<span class="input-group-btn">
+							<button class="glyphicon glyphicon-search btn btn-primary"
+								type="button" data-toggle="modal"
+								data-target="#modalAssociarFamilia"></button>
+						</span>
+
+					</div>
+				</div>
+				<div class="col-sm-6"></div>
+				
+				<div class="col-sm-12" style="margin-top: 10px;">
+					<div class="form-group">
+						<label for="descricao">Descrição</label>
+						<textarea class="form-control" id="descricao" ng-maxlength="255"
+							ng-model="descricao" row="4"></textarea>
+					</div>
+				</div>
+				<div class="col-sm-12">
+					<div class="panel-group">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h4 class="panel-title">
+									Cadastro de Informações Adicionais <a data-toggle="collapse"
+										href="cadastrar.html#!/planta" data-parent="#acordeonPlanta"
+										class="collapsed glyphicon glyphicon-menu-down pull-right"
+										data-target="#acordeonPlanta"></a>
+								</h4>
+							</div>
+							<!-- 							-----------------ajustar melhor as opções--------------- -->
+							<div id="acordeonPlanta" class="panel-collapse collapse">
+								<div class="panel-body">
+									<div class="col-sm-12">
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label for="clima">Clima Favorável</label> <select
+														name="clima" class="ocuparArea form-control" form="clima">
+														<option value="">Selecione...</option>
+														<option value="Equatorial">Equatorial</option>
+														<option value="Tropical">Tropical</option>
+														<option value="Temperado Oceânico">Temperado
+															Oceânico</option>
+														<option value="Mediterrâneo">Mediterrâneo</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label for="regOrigem">Região de Origem</label> <input
+														type="text" class="form-control" id="regOrigem"
+														ng-maxlength="256" ng-model="regOrigem">
+												</div>
+											</div>
+											<div class="col-sm-12">
+												<div class="form-group">
+													<label for="referencias">Referências</label>
+													<textarea class="form-control" id="referencias"
+														ng-maxlength="256" ng-model="referencias" row="4"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 					include da modal -->
+					<div ng-include="'modalFamilia.html'"></div>
+					<div class="pull-right">
+						<button type="submit" class="btn btn-default">Cadastrar</button>
+					</div>
+			</form>
+		</div>
+	</div>
+</div>
